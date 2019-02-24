@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Home - Unnat Bharat Abhiyan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Loading Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="css/flat-ui.css" rel="stylesheet">
+
+     <!-- Loading font icon -->
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- Loading youtube loader -->
+  <link href="css/pace-theme-minimal.css" rel="stylesheet">
+
+    <!-- Loading style -->
+  <link href="css/style.css" rel="stylesheet">
+
+    <!-- favicon -->
+    <link rel="icon" href="images/myfavicon.jpg" type="image/jpeg">
+  <link rel="icon" href="images/myfavicon.ico" type="image/x-icon">
+
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/pace.min.js" data-pace-options="{ 'ajax': false }"></script>
+    <script>
+    $(document).ready(function(){
+      //Top image carousel
+      //Events that reset and restart the timer animation when the slides change
+        $("#transition-timer-carousel").on("slide.bs.carousel", function(event) {
+            //The animate class gets removed so that it jumps straight back to 0%
+            $(".transition-timer-carousel-progress-bar", this)
+              .removeClass("animate").css("width", "0%");
+          }).on("slid.bs.carousel", function(event) {
+              //The slide transition finished, so re-add the animate class so that
+              //the timer bar takes time to fill up
+              $(".transition-timer-carousel-progress-bar", this)
+                .addClass("animate").css("width", "100%");
+          });
+
+          //Kick off the initial slide animation when the document is ready
+          $(".transition-timer-carousel-progress-bar", "#transition-timer-carousel")
+            .css("width", "100%");
+
+      //back to top
+      $(window).scroll(function () {
+            if ($(this).scrollTop() > 50) {
+                $('#back-to-top').fadeIn();
+            } else {
+                $('#back-to-top').fadeOut();
+            }
+        });
+        // scroll body to 0px on click
+        $('#back-to-top').click(function () {
+            $('#back-to-top').tooltip('hide');
+            $('body,html').animate({
+                scrollTop: 0
+            }, 800);
+            return false;
+        });
+
+        $('#back-to-top').tooltip('show');
+    });
+  </script>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body>
+  <div>
+      <!-- navigation -->
+      <div class="nav">
+        <!-- Brand and toggle get grouped for better mobile display -->
+             <!-- logo -->
+        <div class="container-fluid logobar">
+              <!-- search bar -->
+                <div class="row" id="search">
+                  <div class="col-md-9"></div>
+                  <div class="col-md-3">
+                            <script>
+                                  (function() {
+                                    var cx = '008211913149243758329:3farhkyxmwa';
+                                    var gcse = document.createElement('script');
+                                    gcse.type = 'text/javascript';
+                                    gcse.async = true;
+                                    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                                        '//cse.google.com/cse.js?cx=' + cx;
+                                    var s = document.getElementsByTagName('script')[0];
+                                    s.parentNode.insertBefore(gcse, s);
+                                  })();
+                            </script>
+                            <gcse:search></gcse:search>
+          </div>
+                </div><!-- search bar end -->
+
+          <div class="row">
+            <div class="col-md-4 col-sm-4 col-xs-4"><img class="img-responsive" src="images/ubalogo.jpg" width="139" height="137"  alt=""/></div>
+            <div class="col-md-4 col-sm-4 col-xs-4" id="uba"><img class="img-responsive center-block" src="images/heading.jpg" width="424" height="92" alt=""/></div>
+            <div class="col-md-4 col-sm-4 col-xs-4"><a href="http://iitg.ernet.in/" target="_blank"><img src="images/iitglogo.png" alt="" width="124" height="124" class="img-responsive pull-right" border="0"/></a></div>
+          </div>
+      </div><!-- end logo -->
+
+            <nav class="navbar navbar-static-top container-fluid navbar-inverse navbar-lg" role="navigation">
+          <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+                  <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                  </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                          <li id="home"><a href="index.html" target="_self">Home</a></li>
+                            <li id="village"><a href="village.html" target="_self">Pilot Village</a></li>
+                            <li id="event"><a href="events.html" target="_self">Events</a></li>
+                            <li id="theme"><a href="theme.html" target="_self">Related Acitivities</a></li>
+                            <li id="people"><a href="people.html" target="_self">People</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+      </nav>
+    </div><!--nav end-->
+
+        <!--image crousel -->
+      <div class="container">
+           <div class="row">
+                <!-- The carousel -->
+                <div id="transition-timer-carousel" class="carousel slide transition-timer-carousel" data-ride="carousel">
+
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#transition-timer-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#transition-timer-carousel" data-slide-to="1"></li>
+                        <li data-target="#transition-timer-carousel" data-slide-to="2"></li>
+                        <li data-target="#transition-timer-carousel" data-slide-to="3"></li>
+                        <li data-target="#transition-timer-carousel" data-slide-to="4"></li>
+                        <li data-target="#transition-timer-carousel" data-slide-to="5"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <!-- item 1 -->
+                        <div class="item active">
+                            <img class="img-responsive" src="images/scroller/1.jpg" alt="#" />
+                        </div>
+
+                        <!-- item 2 -->
+                        <div class="item">
+                            <img src="images/scroller/2.jpg" class="img-responsive" alt="#" />
+                        </div>
+
+                        <!-- item 3 -->
+                        <div class="item">
+                            <img src="images/scroller/3.jpg" class="img-responsive" alt="#" />
+                        </div>
+
+                        <!-- item 4 -->
+                        <div class="item">
+                            <img src="images/scroller/4.jpg" class="img-responsive" alt="#" />
+                        </div>
+
+                        <!-- item 5 -->
+                        <div class="item">
+                            <img src="images/scroller/5.jpg" class="img-responsive" alt="#" />
+                        </div>
+
+                         <!-- item 6 -->
+                        <div class="item">
+                            <img src="images/scroller/6.jpg" class="img-responsive" alt="#" />
+                        </div>
+                    </div>
+                 </div>
+
+                    <!-- carousel-inner end -->
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#transition-timer-carousel" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#transition-timer-carousel" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                </div>
+      </div><!--image carousel end-->
+
+        <!-- main body -->
+        <div class="container-fluid">
+
+      <div class="row" id="main">
+          <div class="container">
+              <div class="col-md-7">
+                  <h4 class="heading mainheading">About UBA</h4>
+                    <p>Unnat Bharat Abhiyan is inspired by the vision of transformational change in rural development processes by leveraging knowledge institutions to help build the architecture of an Inclusive India. Their mission is conceptualised as a movement to enable processes that connect institutes of higher education with local communities to address the development challenges of rural India through participatory processes and appropriate technologies for accelerating sustainable growth. It also aims to create a virtuous cycle between the society and an inclusive university system by providing knowledge and practices for emerging professions and to upgrade the capabilities of both the public and the private sectors.</p>
+                <ol>
+                  <li>Vision: Unnat Bharat Abhiyan is inspired by the vision of transformational change in rural development processes by leveraging knowledge institutions to help build  the architecture of an  Inclusive India.</li>
+                  <li>Mission: The Mission of Unnat Bharat Abhiyan  is to enable higher educational institutions to work with the people of rural India in identifying development challenges and evolving appropriate solutions for accelerating   sustainable growth. It also aims to create a virtuous cycle between society and an inclusive academic system by providing knowledge and practices for emerging professions and to upgrade the capabilities of both the public and the private sectors in responding to the development needs of rural India.
+                  </li>
+                </ol>
+                </div>
+                <div class="col-md-1"></div>
+            <div class="col-md-4">
+                  <div class="box boxborder">
+                        <h4 align="left" class="style2 hboarder">UBA 2.0</h4>
+                        <p class="new"><b>5<sup>th</sup> January, 2019:</b> Regional Workshop on Planning of UBA activities in Village Clusters adopted by Participating Institutes of North Eastern Region</p>
+                    </div>
+                  <div class="box">
+                        <h4 class="heading style2 color2">Upcoming Events</h4>
+
+                    </div>
+                    <div class="box">
+                      <h4 class="heading style2 color3">Concluded Events</h4>
+                        <p>Third animal health camp at Kating Pahar on 27th March, 2016 around 8 AM onwards.<small class="danger">New</small></p>
+                    </div>
+                    <div class="box">
+                      <h4 class="heading style2 color5">Reports/Slides</h4>
+                        <p><a href="doc/report/uba2015-16.pdf" target="_blank">Report 2015 - 16</a></p>
+                        <p><a href="doc/report/uba_slides.pdf" target="_blank">Report  - UBA Slides</a></p>
+                        <p><a href="doc/report/swachbharat abhiyan.pdf" target="_blank">Swach Bharat Abhiyan 2017</a><img src="images/new.gif" width="50" height="29"></p>
+                        <p><a href="doc/report/uba plantation drive.pdf" target="_blank">UBA Plantation Drive'17</a><img src="images/new.gif" width="50" height="29"></p>
+                    </div>
+                 </div>
+      </div>
+
+          </div>
+</div><!-- end main body -->
+        <div id="strip"></div>
+        <!-- footer -->
+        <div id="footer" class="panel-footer">
+          <div class="container">
+            <div class="row" id="quicklinks">
+              <div class="col-md-12">
+                  <div class="col-md-3 col-sm-12 col-xs-12">
+                      <h6>Quick Links</h6>
+                        <ul>
+                          <li><a href="index.html" target="_self">Home</a></li>
+                            <li><a href="village.html" target="_self">Pilot village</a></li>
+                            <li><a href="events.html" target="_self">Events</a></li>
+                            <li><a href="theme.html" target="_self">Related activities</a></li>
+                            <li><a href="people.html" target="_self">People</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                      <h6>Related Links</h6>
+                        <ul>
+                          <li><a href="http://unnat.iitd.ac.in" target="_blank">Unnat Bharat Abhiyan, IIT Delhi</a></li>
+                            <li><a href="http://unnat.iitd.ac.in/index.php/en/institutes" target="_blank">Participant institutes</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                      <h6>Photos</h6>
+                        <ul>
+                          <li><a href="picgallery.html" target="_self">Photo gallery</a></li>
+                            <li><a href="">Video gallery</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                      <h6>Media</h6>
+                        <ul>
+                          <li><a href="">News</a></li>
+                            <li><a href="village.html" target="_self">Map</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+          </div>
+            <div class="row" id="copyright">
+                        <!-- copyright -->
+                    <div class="col-md-12 col-sm-12">
+                          <div class="col-md-6 col-sm-6">
+                          <p class="text-muted">&copy; 2016 <a href="#" target="_self"><b>Unnat Bharat Abhiyan, IIT Guwahati</b></a>. All rights reserved</p>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                              <p class="text-muted pull-right">Design by <a href="mailto://jayantamz@iitg.ernet.in" target="new">Jayanta Mazumdar</a> | Coded by <a href="https://www.facebook.com/brchaudhary" target="_blank">Bikash Roy Chaudhary</a></p>
+                            </div>
+                      </div>
+
+            </div>
+        </div><!-- end footer -->
+
+    <!-- back to top icon -->
+      <a id="back-to-top" href="#" class="btn btn-danger btn-lg back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>
+    </div><!-- end page -->
+
+      <!--</div>--><!-- /.container -->
+
+
+    <!-- Load JS here for greater good =============================-->
+
+    <script src="js/bootstrap-select.js"></script>
+    <script src="js/bootstrap-switch.js"></script>
+    <script src="js/flatui-checkbox.js"></script>
+    <script src="js/flatui-radio.js"></script>
+    <script src="js/jquery.tagsinput.js"></script>
+    <script src="js/jquery.placeholder.js"></script>
+  </body>
+</html>
